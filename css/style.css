@@ -1,0 +1,87 @@
+/*
+Colors
+Green: #43BC46
+Blue: #4643BC
+Red: #BC4643
+*/
+/*typography*/
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 1.25em;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Orienta', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: 'Orienta', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+body {
+  background-color: lightgrey;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.25em;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/*images*/
+img {
+  width: 100%;
+}
+
+/*links*/
+a {
+  color: #4643BC;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #BC4643;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #43BC46;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #4643BC;
+text-decoration: none;
+}
+/*buttons*/
+.button,
+.button:visited {
+  display: inline-block;
+  background-color: #43BC46;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #43BC46;
+  transition-duration: 0.2s opacity;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  display: inline-block;
+  background-color: #BC4643;
+  color: #fff;
+  border: 2px solid #BC4643;
+  text-decoration: none;
+}
+
+.button:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
