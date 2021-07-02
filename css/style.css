@@ -33,6 +33,7 @@ header {
   border-bottom: 3px solid #31ce32;
   box-shadow: 0 5px 10px 0 #d0f2f5;
   position: relative;
+  width: 100%;
 }
 nav > ul > li {
   list-style-type: none;
