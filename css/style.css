@@ -63,13 +63,17 @@ body {
 }
 .container {
   padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .row {
-  margin: 25px 0;
+  margin: 24px 0;
+}
+.subrow {
+  margin: 24px 0;
 }
 #work .row {
   padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
 }
 #hero {
   background-color: #d0f2f5;
@@ -83,14 +87,23 @@ body {
   text-align: center;
   margin: 0;
 }
+#hero span {
+  display: block;
+}
 #contact {
   background-color: #ccfec1;
   text-align: center;
   padding: 15px 15px;
   margin: 10px;
 }
+.contact_row {
+  margin: 16px 0;
+}
 .logo {
   max-width: 250px;
+}
+.icon {
+  padding: 0px 2px;
 }
 /*images*/
 img {
@@ -106,18 +119,21 @@ a {
 a:visited {
   color: #BC4643;
   text-decoration: none;
+  transition-duration: 0.2s opacity;
 }
 
 a:hover,
 a:focus {
   color: #43BC46;
   text-decoration: underline;
+  opacity: 0.8;
 }
 
 a:active {
   color: #4643BC;
 text-decoration: none;
 }
+
 /*buttons*/
 .button,
 .button:visited {
@@ -135,13 +151,87 @@ text-decoration: none;
 .button:focus,
 .button:active {
   display: inline-block;
-  background-color: #BC4643;
   color: #fff;
-  border: 2px solid #BC4643;
   text-decoration: none;
+  transition-duration: 0.2s opacity;
 }
 
 .button:hover {
   opacity: 0.8;
   text-decoration: none;
+}
+
+/*animations&colors*/
+@keyframes color-change {
+  from {fill: #014463;}
+  to {fill: #ee1115;}
+}
+@keyframes line-move {
+  from {transform: translate(0,0px);}
+  to {transform: translate(80px,0px);}
+}
+@keyframes dot-move {
+  from {transform: translate(0,0px);}
+  to {transform: translate(80px,0px);}
+}
+.steam-long,
+.steam-short,
+.steam-dot {
+  animation-duration: 1s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.pot-line {
+  animation-duration: 5s;
+  animation-name: line-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.pot-dot {
+  animation-duration: 5s;
+  animation-name: dot-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  .col-md-6 {
+  width: 50%;
+}
+[class*="col-"] {
+  float: left;
+  padding: 20px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+}
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .col-lg-7 {
+  width: 60%;
+}
+.col-lg-5 {
+  width: 40%;
+}
 }
